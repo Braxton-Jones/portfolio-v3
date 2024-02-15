@@ -11,6 +11,8 @@ import { Separator } from '@/components/ui/separator'
 import CustomNavbar from './components/CustomNavbar'
 
 import Link from 'next/link'
+import Projects from './components/Projects'
+
 
 export default function Home() {
     return (
@@ -78,28 +80,7 @@ export default function Home() {
                 </div>
 
                 {/* Projects */}
-                <section className="px-1">
-                    <h2 className="font-montserrat text-sm font-bold text-white">
-                        Projects
-                    </h2>
-                    <div className="flex flex-row">
-                        <div>
-                            <h3 className="font-montserrat text-sm font-bold text-white">
-                                Radix
-                            </h3>
-                            <p className="font-inconsolata font-normal tracking-wide text-colorone">
-                                A collection of low-level UI primitives to build
-                                your own design system.
-                            </p>
-                            <Link
-                                href="#"
-                                className="font-inconsolata font-bold text-colorone"
-                            >
-                                See All
-                            </Link>
-                        </div>
-                    </div>
-                </section>
+                <Projects/>
             </div>
         </main>
     )

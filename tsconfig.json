@@ -29,6 +29,6 @@
         ".next/types/**/*.ts",
         "app/components/ImageCard.jsx",
         "app/about/page.tsx"
-    ],
+, "sanity/lib/schemas/Post.ts"    ],
     "exclude": ["node_modules"]
 }
