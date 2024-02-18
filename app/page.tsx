@@ -13,11 +13,11 @@ async function getProjects() {
 
 export default async function Home() {
     const projects = await getProjects()
-    console.log("Projects:", projects[0])
+    console.log("Projects:", projects)
 
     return (
         <main className="box-border flex h-screen justify-center ">
-            <div className="mx-6 my-10 flex max-w-screen-md flex-col gap-14  ">
+            <div className="mx-6 my-10 flex max-w-screen-sm flex-col gap-14  ">
                 {/* Header */}
                 <div className="flex items-center justify-between">
                     <div>
@@ -79,6 +79,14 @@ export default async function Home() {
                     </div>
                 </div>
 
+                {/* Blog */}
+                <section className="px-1">
+                    <h2 className="font-montserrat text-sm font-bold text-white mb-2">
+                        Blog :
+                    </h2>
+
+                </section>
+
                 {/* Projects */}
                 <section className="px-1">
                     <h2 className="font-montserrat text-sm font-bold text-white mb-2">
@@ -102,6 +110,8 @@ export default async function Home() {
                     </div>
                 
                 </section>
+
+                
                
             </div>
         </main>

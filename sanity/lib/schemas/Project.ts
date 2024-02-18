@@ -3,6 +3,7 @@ type Project ={
     name: string;
     type: string;
     githubUrl: string;
+    order: number;
     liveUrl: string;
     fields: Field[];
 };
@@ -24,6 +25,7 @@ const Project: Project = {
     title: 'Project',
     name: 'Project',
     type: 'document',
+    order: 1,
     githubUrl: 'string',
     liveUrl: 'string',
     fields: [

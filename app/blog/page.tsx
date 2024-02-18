@@ -6,7 +6,7 @@ async function getBlogPosts() {
 
 }
 export default async function Blog() {
-    const posts = getBlogPosts()
+    const posts = await getBlogPosts()
     console.log("Posts:", posts)
   return (
     <div>page</div>

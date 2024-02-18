@@ -2,6 +2,7 @@ type Post ={
     title: string;
     name: string;
     type: string;
+    featured: boolean;
     fields: Field[];
 };
 
@@ -22,6 +23,7 @@ type Field = {
     title: 'BlogPost',
     name: 'blogpost',
     type: 'document',
+    featured: false,
     fields: [
         {
             title: 'Accent Image',

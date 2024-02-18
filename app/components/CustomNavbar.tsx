@@ -26,12 +26,6 @@ export default function CustomNavbar() {
                             About
                         </NavigationMenuLink> 
                         <NavigationMenuLink 
-                        href="/projects"
-                        className='px-4 py-2 text-center text-1xl font-medium bg-slate-200'
-                        >
-                            Projects
-                        </NavigationMenuLink>
-                        <NavigationMenuLink 
                         href="/blog"
                         className='px-4 py-2 text-center text-1xl font-medium bg-slate-300'
                         >
