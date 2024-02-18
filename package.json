@@ -17,6 +17,7 @@
         "@sanity/vision": "^3.29.1",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.0",
+        "get-random-values-esm": "^1.0.2",
         "lucide-react": "^0.330.0",
         "next": "14.1.0",
         "next-sanity": "^7.1.4",

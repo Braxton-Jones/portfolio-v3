@@ -1,46 +1,61 @@
-const post = {
-    title: 'Post',
-    name: 'post',
+type Post ={
+    title: string;
+    name: string;
+    type: string;
+    fields: Field[];
+};
+
+type Field = {
+    title: string;
+    name: string;
+    type: string;
+    description?: string;
+    options?: {
+        hotspot: boolean;
+    };
+    of?: {
+        type: string;
+    }[];
+};
+
+ const Post : Post = {
+    title: 'BlogPost',
+    name: 'blogpost',
     type: 'document',
     fields: [
         {
             title: 'Accent Image',
-            name: 'accentImage',
+            name: 'Image',
             type: 'image',
-            description: 'This image will be used as the accent image for the post',
+            description: 'This image will be used as the post image for the Post',
             options: {
                 hotspot: true,
             }
         },
         {
-            title: 'Post Title',
-            name: 'postTitle',
+            title: 'Title',
+            name: 'title',
+            type: 'string',
+        },
+        {
+            title: 'Summary',
+            name: 'summary',
             type: 'string',
         },
         {
             name: 'slug',
-            title: 'Slug',
+            title: 'slug',
             type: 'slug',
         },
         {
-            name: 'publishedAt',
-            title: 'Published at',
-            type: 'datetime',
-        },
-        {
-            name: 'body',
-            title: 'Body',
+            name: 'Body',
+            title: 'body',
             type: 'array',
-            of: [
-                {type: 'block'}
-            ]
-        },
-        {
-            name: 'summary',
-            title: 'Summary',
-            type: 'string',
+            of: [{ type: 'block' }],
         }
-    ]
+        
+    ],
 };
 
-export default post;
+export default Post;
+

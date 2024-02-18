@@ -29,17 +29,22 @@ const Project: Project = {
     fields: [
         {
             title: 'Project Title',
-            name: 'projectTitle',
+            name: 'Title',
             type: 'string',
         },
         {
-            title: 'Project Description',
-            name: 'projectDescription',
+            title: 'Project Long Description',
+            name: 'DetailedDescription',
+            type: 'text',
+        },
+        {
+            title: 'Project Short Description',
+            name: 'ShortDescription',
             type: 'text',
         },
         {
             title: 'Project Image',
-            name: 'projectImage',
+            name: 'Image',
             type: 'image',
             description: 'This image will be used as the project image for the Project',
             options: {

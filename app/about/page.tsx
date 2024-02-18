@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function About() {
     return (
-        <main className="mx-6 my-10 h-screen w-screen flex justify-center">
+        <main className="mx-6 my-10 flex justify-center">
             <section className='max-w-screen-md'>
 
             
@@ -15,7 +15,7 @@ export default function About() {
             <div className='relative'>
                 <> 
                 <Link href={"/"}>
-                 <Image src={arrow} alt="arrow" width={30} className='absolute -left-10 invert hover:scale-125'  />   
+                 <Image src={arrow} alt="arrow" width={30} className='invert hover:scale-125'  /> 
                 </Link>
                 
                     <h2 className="font-montserrat text-2xl font-bold text-white">
