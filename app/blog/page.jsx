@@ -9,7 +9,7 @@ export default async function Blog() {
     const posts = await getBlogPosts()
     console.log('Posts:', posts)
     return (
-        <section className="mx-5 w-full">
+        <section className="mx-5">
             <div className="mb-5 flex flex-col gap-4">
                 <h1 className="font-montserrat text-lg font-bold text-white ">
                     Blog

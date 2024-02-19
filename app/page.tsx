@@ -34,11 +34,19 @@ export default async function Home() {
                     behaves for users.
                 </p>
 
-                <p className="font-inconsolata font-normal tracking-wide text-colorone mt-1">
+                <p className="mt-1 font-inconsolata font-normal tracking-wide text-colorone">
                     {`Currently, I'm working on a new project named "Crates".
                     It's a playlist organizer using Spotify's API. I'm using Next.js,
                     TailwindCSS, and Typescript to build it out. See where I'm at -> `}
-                    <Link href={"https://github.com/Braxton-Jones/crates_playlist_manager"} className='underline italic'>Crates</Link>.
+                    <Link
+                        href={
+                            'https://github.com/Braxton-Jones/crates_playlist_manager'
+                        }
+                        className="italic underline"
+                    >
+                        Crates
+                    </Link>
+                    .
                 </p>
 
                 <div className="mt-2 flex flex-col">
@@ -104,7 +112,7 @@ export default async function Home() {
                     Projects :
                 </h2>
                 <div className="flex flex-col gap-6">
-                    {projects.map((project: any, index:number) => {
+                    {projects.map((project: any, index: number) => {
                         return (
                             <Link href={project.githubURL || '#'} key={index}>
                                 <div className="box-border flex flex-col gap-3 rounded-xl bg-colorthree px-3 py-6 hover:brightness-75">
