@@ -35,9 +35,9 @@ export default async function Home() {
                 </p>
 
                 <p className="font-inconsolata font-normal tracking-wide text-colorone mt-1">
-                    Currently, I'm working on a new project named "Crates".
+                    {`Currently, I'm working on a new project named "Crates".
                     It's a playlist organizer using Spotify's API. I'm using Next.js,
-                    TailwindCSS, and Typescript to build it out. See where I'm at {'-> '}
+                    TailwindCSS, and Typescript to build it out. See where I'm at -> `}
                     <Link href={"https://github.com/Braxton-Jones/crates_playlist_manager"} className='underline italic'>Crates</Link>.
                 </p>
 
@@ -75,7 +75,7 @@ export default async function Home() {
             {/* What's new */}
             <section className="px-1">
                 <h2 className="mb-3 font-montserrat text-sm font-bold text-white">
-                    What's New :
+                    {`What's New :`}
                 </h2>
                 <Separator />
                 <div className="mt-3 flex flex-col gap-3">
@@ -123,5 +123,3 @@ export default async function Home() {
         </div>
     )
 }
-
-// inconsolata

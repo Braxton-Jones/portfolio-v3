@@ -48,21 +48,21 @@ export default function About() {
                     About
                 </h5>
                 <p className="my-3 font-inconsolata text-colorone">
-                    Hello! I'm Braxton Jones, a software engineer based in
-                    Maryland.
+                    {`Hello! I'm Braxton Jones, a software engineer based in
+                    Maryland.`}
                 </p>
                 <p className="my-3 font-inconsolata text-colorone">
-                    I have a passion for web experiences that feel consistent &
+                    {`I have a passion for web experiences that feel consistent &
                     effortless. I'm always looking for new ways to incorporate
-                    that into my work.
+                    that into my work.`}
                 </p>
                 <p className="my-3 font-inconsolata text-colorone">
-                    Besides coding, I enjoy web design and how it can be used to
-                    create a more enjoyable experience for the user.
+                    {`Besides coding, I enjoy web design and how it can be used to
+                    create a more enjoyable experience for the user.`}
                 </p>
                 <p className="my-3 font-inconsolata text-colorone">
-                    When I'm not at the desk, I produce music, attempt to DJ,
-                    and read.
+                    {`When I'm not at the desk, I produce music, attempt to DJ,
+                    and read.`}
                 </p>
             </div>
 
@@ -72,7 +72,7 @@ export default function About() {
                     Connect
                 </h5>
                 <p className="my-3 font-inconsolata text-colorone">
-                    Don't hesitate to reach out via{' '}
+                    {`Don't hesitate to reach out via `}
                     <a
                         href="mailto:braxtonjonesdev@gmail.com"
                         className="font-bold underline hover:text-purple-200"
