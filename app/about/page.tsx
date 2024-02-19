@@ -7,17 +7,10 @@ import Link from 'next/link'
 
 export default function About() {
     return (
-        <main className="mx-6 my-10 flex justify-center">
-            <section className='max-w-screen-md'>
-
-            
+        <section className="mx-5 max-w-screen-sm">
             {/* About */}
-            <div className='relative'>
-                <> 
-                <Link href={"/"}>
-                 <Image src={arrow} alt="arrow" width={30} className='invert hover:scale-125'  /> 
-                </Link>
-                
+            <div className="relative">
+                <>
                     <h2 className="font-montserrat text-2xl font-bold text-white">
                         About Me
                     </h2>
@@ -54,24 +47,23 @@ export default function About() {
                 <h5 className="w-min rounded-sm bg-colorone px-1 font-montserrat text-xs font-bold">
                     About
                 </h5>
-                <p className='font-inconsolata text-colorone my-3'>
+                <p className="my-3 font-inconsolata text-colorone">
                     Hello! I'm Braxton Jones, a software engineer based in
                     Maryland.
                 </p>
-                <p className='font-inconsolata text-colorone my-3'>
+                <p className="my-3 font-inconsolata text-colorone">
                     I have a passion for web experiences that feel consistent &
                     effortless. I'm always looking for new ways to incorporate
                     that into my work.
                 </p>
-                <p className='font-inconsolata text-colorone my-3'>
+                <p className="my-3 font-inconsolata text-colorone">
                     Besides coding, I enjoy web design and how it can be used to
                     create a more enjoyable experience for the user.
                 </p>
-                <p className='font-inconsolata text-colorone my-3'>
+                <p className="my-3 font-inconsolata text-colorone">
                     When I'm not at the desk, I produce music, attempt to DJ,
                     and read.
                 </p>
-
             </div>
 
             {/* Connect */}
@@ -79,28 +71,26 @@ export default function About() {
                 <h5 className="w-min rounded-sm bg-colorone px-1 font-montserrat text-xs font-bold">
                     Connect
                 </h5>
-                <p className='font-inconsolata text-colorone my-3'>
-                Don't hesitate to reach out via <a href='mailto:braxtonjonesdev@gmail.com' className='font-bold underline hover:text-purple-200'>email</a> if you have any questions or just want to chat.
+                <p className="my-3 font-inconsolata text-colorone">
+                    Don't hesitate to reach out via{' '}
+                    <a
+                        href="mailto:braxtonjonesdev@gmail.com"
+                        className="font-bold underline hover:text-purple-200"
+                    >
+                        email
+                    </a>{' '}
+                    if you have any questions or just want to chat.
                 </p>
-                <p className='font-inconsolata text-colorone my-3'>
-                You can also find me on other platforms using the handle <a className='font-bold underline hover:text-purple-200' href='https://twitter.com/brxjonesdev'>@brxjonesdev.</a>
+                <p className="my-3 font-inconsolata text-colorone">
+                    You can also find me on other platforms using the handle{' '}
+                    <a
+                        className="font-bold underline hover:text-purple-200"
+                        href="https://twitter.com/brxjonesdev"
+                    >
+                        @brxjonesdev.
+                    </a>
                 </p>
-               
-               
-
             </div>
-
-            {/* Blog */}
-            <div className="mt-10">
-                <h5 className="w-max rounded-sm bg-colorone px-1 font-montserrat text-xs font-bold">
-                    What's New
-                </h5>
-            
-               
-               
-
-            </div>
-            </section>
-        </main>
+        </section>
     )
 }

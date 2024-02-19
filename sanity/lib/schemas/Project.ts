@@ -1,31 +1,29 @@
-type Project ={
-    title: string;
-    name: string;
-    type: string;
-    githubUrl: string;
-    order: number;
-    liveUrl: string;
-    fields: Field[];
-};
+type Project = {
+    title: string
+    name: string
+    type: string
+    githubUrl: string
+    liveUrl: string
+    fields: Field[]
+}
 
 type Field = {
-    title: string;
-    name: string;
-    type: string;
-    description?: string;
+    title: string
+    name: string
+    type: string
+    description?: string
     options?: {
-        hotspot: boolean;
-    };
+        hotspot: boolean
+    }
     of?: {
-        type: string;
-    }[];
-};
+        type: string
+    }[]
+}
 
 const Project: Project = {
     title: 'Project',
     name: 'Project',
     type: 'document',
-    order: 1,
     githubUrl: 'string',
     liveUrl: 'string',
     fields: [
@@ -35,23 +33,14 @@ const Project: Project = {
             type: 'string',
         },
         {
-            title: 'Project Long Description',
-            name: 'DetailedDescription',
-            type: 'text',
+            title: 'Order',
+            name: 'Order',
+            type: 'number',
         },
         {
-            title: 'Project Short Description',
-            name: 'ShortDescription',
+            title: 'Project Description',
+            name: 'Details',
             type: 'text',
-        },
-        {
-            title: 'Project Image',
-            name: 'Image',
-            type: 'image',
-            description: 'This image will be used as the project image for the Project',
-            options: {
-                hotspot: true,
-            }
         },
         {
             title: 'Project URL',
@@ -60,10 +49,10 @@ const Project: Project = {
         },
         {
             title: 'Project Github URL',
-            name: 'projectGithubUrl',
+            name: 'githubURL',
             type: 'string',
         },
     ],
-};
+}
 
-export default Project;
+export default Project

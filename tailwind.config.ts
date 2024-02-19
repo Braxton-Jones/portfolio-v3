@@ -3,9 +3,9 @@ import type { Config } from 'tailwindcss'
 const config = {
     darkMode: ['class'],
     content: [
-        './pages/**/*.{ts,tsx}',
+        './pages/**/*.{ts,tsx, jsx}',
         './components/**/*.{ts,tsx}',
-        './app/**/*.{ts,tsx}',
+        './app/**/*.{ts,tsx,jsx}',
         './src/**/*.{ts,tsx}',
     ],
     prefix: '',
@@ -21,6 +21,7 @@ const config = {
             colors: {
                 colorone: '#cccccc',
                 colortwo: '#b5b3ad',
+                colorthree: 'hsla(360, 100%, 100%, 0.1)',
                 twitter: '#1da1f2',
                 github: '#c9510c',
                 linkedin: '#0077b5',

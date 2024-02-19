@@ -1,25 +1,25 @@
-type Post ={
-    title: string;
-    name: string;
-    type: string;
-    featured: boolean;
-    fields: Field[];
-};
+type Post = {
+    title: string
+    name: string
+    type: string
+    featured: boolean
+    fields: Field[]
+}
 
 type Field = {
-    title: string;
-    name: string;
-    type: string;
-    description?: string;
+    title: string
+    name: string
+    type: string
+    description?: string
     options?: {
-        hotspot: boolean;
-    };
+        hotspot: boolean
+    }
     of?: {
-        type: string;
-    }[];
-};
+        type: string
+    }[]
+}
 
- const Post : Post = {
+const Post: Post = {
     title: 'BlogPost',
     name: 'blogpost',
     type: 'document',
@@ -29,10 +29,16 @@ type Field = {
             title: 'Accent Image',
             name: 'Image',
             type: 'image',
-            description: 'This image will be used as the post image for the Post',
+            description:
+                'This image will be used as the post image for the Post',
             options: {
                 hotspot: true,
-            }
+            },
+        },
+        {
+            title: 'Featured',
+            name: 'featured',
+            type: 'boolean',
         },
         {
             title: 'Title',
@@ -54,10 +60,8 @@ type Field = {
             title: 'body',
             type: 'array',
             of: [{ type: 'block' }],
-        }
-        
+        },
     ],
-};
+}
 
-export default Post;
-
+export default Post
