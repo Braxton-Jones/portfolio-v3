@@ -104,9 +104,9 @@ export default async function Home() {
                     Projects :
                 </h2>
                 <div className="flex flex-col gap-6">
-                    {projects.map((project: any) => {
+                    {projects.map((project: any, index:number) => {
                         return (
-                            <Link href={project.githubURL || '#'}>
+                            <Link href={project.githubURL || '#'} key={index}>
                                 <div className="box-border flex flex-col gap-3 rounded-xl bg-colorthree px-3 py-6 hover:brightness-75">
                                     <h3 className="font-montserrat text-sm font-bold text-white">
                                         {project.Title}
