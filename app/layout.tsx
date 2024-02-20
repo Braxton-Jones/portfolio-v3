@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/popover'
 
 export const metadata: Metadata = {
-    title: 'Portfolio for Braxton Jones',
+    title: 'Braxton Jones - Portfolio',
     description: 'Portfolio for Braxton Jones',
 }
 

@@ -53,7 +53,7 @@ export default async function Home() {
                     <Separator />
                     <div className="mt-2 flex gap-3">
                         <Link
-                            href=""
+                            href="mailto:braxtonjonesdev@gmail.com"
                             className="mb-2 h-min w-max rounded-sm p-1.5 text-center font-inconsolata text-colorone underline  hover:bg-gray-100 hover:bg-opacity-5 hover:text-purple-300"
                         >
                             Contact
