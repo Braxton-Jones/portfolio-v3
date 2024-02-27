@@ -28,23 +28,22 @@ export default async function Home() {
                     Currently :
                 </h2>
                 <p className="font-inconsolata font-normal tracking-wide text-colorone">
-                    I am building things that interest me. I love building web
+                    {`I'm looking for new opportunities, I love building web
                     experiences where I can not only build out the
                     functionalities but consider the UI and how it feels and
-                    behaves for users.
+                    behaves for users.`}
                 </p>
 
                 <p className="mt-1 font-inconsolata font-normal tracking-wide text-colorone">
-                    {`Currently, I'm working on a new project named "Crates".
-                    It's a playlist organizer using Spotify's API. I'm using Next.js,
-                    TailwindCSS, and Typescript to build it out. See where I'm at -> `}
+                    {`Currently I'm working on a few projects; a playlist managment app, a word game and an employee onboarding system.
+                    I'm putting most of my time into the word game, see where I'm at -> `}
                     <Link
                         href={
-                            'https://github.com/Braxton-Jones/crates_playlist_manager'
+                            'https://github.com/Braxton-Jones/matchanym'
                         }
                         className="italic underline"
                     >
-                        Crates
+                        Matchanym
                     </Link>
                     .
                 </p>
