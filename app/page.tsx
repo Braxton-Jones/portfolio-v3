@@ -3,6 +3,15 @@ import Link from 'next/link'
 import { client_Portfolio_V3 } from '@/sanity/lib/client'
 import { urlForImage } from '@/sanity/lib/image'
 import Image from 'next/image'
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+  } from "@/components/ui/card"
+  
 
 async function getProjects() {
     const query = `*[_type == "Project"]`
@@ -89,7 +98,7 @@ export default async function Home() {
                 <div className="mt-3 flex flex-col gap-3">
                     {/* <p className="font-montserrat text-sm font-bold text-white underline">Featured Post</p> */}
                     <Link href={`/blog/${featuredPost.slug.current}` || '#'}>
-                        <div className="box-border flex flex-col gap-3 rounded-xl bg-colorthree hover:brightness-75">
+                        {/* <div className="box-border flex flex-col gap-3 rounded-xl bg-colorthree hover:brightness-75">
                             <img
                                 src={urlForImage(featuredPost.Image)}
                                 alt="featured post"
@@ -101,7 +110,24 @@ export default async function Home() {
                             <p className="text-md px-2 pb-4 font-inconsolata leading-relaxed text-colorone">
                                 {featuredPost.summary}
                             </p>
-                        </div>
+                        </div> */}
+                        <Card className='bg-colorthree hover:scale border-opacity-0'>
+                            <CardHeader>
+                            <CardTitle className='font-montserrat text-md tracking-wide font-bold text-white'>Featured Post:</CardTitle>
+                            <Image
+                                    src={urlForImage(featuredPost.Image)}
+                                    alt="featured post"
+                                    height={200}
+                                    width={200}
+                                    className='rounded-sm w-full'
+                                />
+                                <CardTitle className='font-montserrat text-md tracking-wide font-bold text-white'>{featuredPost.title}</CardTitle>
+                                <CardDescription className='font-inconsolata text-colorone leading-relaxed'>
+                                    {featuredPost.summary}
+                                </CardDescription>
+                            </CardHeader>
+                           
+                        </Card>
                     </Link>
                 </div>
             </section>
@@ -115,14 +141,14 @@ export default async function Home() {
                     {projects.map((project: any, index: number) => {
                         return (
                             <Link href={project.githubURL || '#'} key={index}>
-                                <div className="box-border flex flex-col gap-3 rounded-xl bg-colorthree px-3 py-6 hover:brightness-75">
-                                    <h3 className="font-montserrat text-sm font-bold text-white">
-                                        {project.Title}
-                                    </h3>
-                                    <p className="text-md font-inconsolata leading-relaxed text-colorone">
-                                        {project.Details}
-                                    </p>
-                                </div>
+                                <Card className='bg-colorthree hover:scale border-opacity-0'>
+                                    <CardHeader>
+                                        <CardTitle className='font-montserrat text-md tracking-wide font-bold text-white'>{project.Title}</CardTitle>
+                                        <CardDescription className='font-inconsolata text-colorone leading-relaxed'>
+                                            {project.Details}
+                                        </CardDescription>
+                                    </CardHeader>
+                                </Card>
                             </Link>
                         )
                     })}
