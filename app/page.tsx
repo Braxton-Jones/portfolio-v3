@@ -48,7 +48,7 @@ export default async function Home() {
                     I'm putting most of my time into the word game, see where I'm at -> `}
                     <Link
                         href={
-                            'https://github.com/Braxton-Jones/matchanym'
+                            'https://matchanym-game.netlify.app/'
                         }
                         className="italic underline"
                     >
