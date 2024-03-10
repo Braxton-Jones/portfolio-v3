@@ -10,8 +10,7 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-  } from "@/components/ui/card"
-  
+} from '@/components/ui/card'
 
 async function getProjects() {
     const query = `*[_type == "Project"]`
@@ -30,31 +29,17 @@ export default async function Home() {
     const featuredPost = await getFeaturedPost()
 
     return (
-        <div className="mx-5 mb-5 flex max-w-screen-sm flex-col gap-14  ">
-            {/* Currently Working On */}
-            <div className="px-1">
+        <div className="mx-5 mb-5 flex max-w-screen-sm flex-col gap-10  ">
+            {/* Header */}
+            <div>
                 <h2 className="mb-2 font-montserrat text-sm font-bold text-white">
-                    Currently :
+                    About Me:
                 </h2>
                 <p className="font-inconsolata font-normal tracking-wide text-colorone">
-                    {`I'm looking for new opportunities, I love building web
-                    experiences where I can not only build out the
-                    functionalities but consider the UI and how it feels and
-                    behaves for users.`}
-                </p>
-
-                <p className="mt-1 font-inconsolata font-normal tracking-wide text-colorone">
-                    {`Currently I'm working on a few projects; a playlist managment app, a word game and an employee onboarding system.
-                    I'm putting most of my time into the word game, see where I'm at -> `}
-                    <Link
-                        href={
-                            'https://matchanym-game.netlify.app/'
-                        }
-                        className="italic underline"
-                    >
-                        Matchanym
-                    </Link>
-                    .
+                    {`
+                    I'm a web developer based in Annapolis, Maryland. I've been learning and building web applications for the past 4 years. 
+                    I'm passionate about building web experiences that are not only functional but also beautiful and intuitive.
+                    `}
                 </p>
 
                 <div className="mt-2 flex flex-col">
@@ -88,69 +73,106 @@ export default async function Home() {
                 </div>
             </div>
 
+            {/* Currently Working On */}
+            <div className="px-1">
+                <h2 className="mb-2 font-montserrat text-sm font-bold text-white">
+                    What I'm Working On:
+                </h2>
+
+                <p className="mt-1 font-inconsolata font-normal tracking-wide text-colorone">
+                    {`
+                    Currently I'm working on a few projects; a playlist managment app, a word game and an employee onboarding system.
+                    I'm putting most of my time into the word game, see where I'm at -> 
+                    `}
+                    <Link
+                        href={'https://matchanym-game.netlify.app/'}
+                        className="italic underline"
+                    >
+                        Matchanym
+                    </Link>
+                    .
+                </p>
+            </div>
+
+            
+            <div>
+                <Link
+                    href={'https://matchanym-game.netlify.app/'}
+                    className="italic underline hover:bg-colorone hover:opacity-20"
+                >
+                    <p className="font-montserrat text-sm font-bold text-white border p-2 rounded-lg w-fit ">
+                    ✨ Play my word game, Matchanym
+                    </p>
+                </Link>
+            </div>
+
+            {/* Projects */}
+            <section className="px-1">
+                <h2 className="font-montserrat text-lg font-black text-white">
+                    Projects :
+                </h2>
+                <Separator className="my-3" />
+                <div className="flex flex-col gap-2">
+                    {projects.map((project: any, index: number) => {
+                        // project.Title
+                        // project.Details
+                        return (
+                            <Link
+                                key={index}
+                                href={project.projectUrl || '#'}
+                                className="flex rounded-sm p-3 hover:bg-colortwo hover:bg-opacity-10"
+                            >
+                                {project.Image ? (<div>
+                                    <Image
+                                        src={urlForImage(project.Image) ||`#`}
+                                        alt={project.Title}
+                                        height={100}
+                                        width={100}
+                                        className='rounded-sm w-full h-full'
+                                    />
+                                </div>) : null}
+                            
+                                <div>
+                                    <h2 className="font-montserrat text-sm font-black tracking-wider text-white">
+                                        {project.Title}
+                                    </h2>
+                                    <p className="font-inconsolata text-sm text-colorone">
+                                        {project.Details}
+                                    </p>
+                                </div>
+                            </Link>
+                        )
+                    })}
+                </div>
+            </section>
+
             {/* What's new */}
             <section className="px-1">
-                <h2 className="mb-3 font-montserrat text-sm font-bold text-white">
-                    {`What's New :`}
+                <h2 className="mb-3 font-montserrat text-lg font-bold text-white">
+                    {`Blog Posts:`}
                 </h2>
                 <Separator />
                 <div className="mt-3 flex flex-col gap-3">
                     {/* <p className="font-montserrat text-sm font-bold text-white underline">Featured Post</p> */}
                     <Link href={`/blog/${featuredPost.slug.current}` || '#'}>
-                        {/* <div className="box-border flex flex-col gap-3 rounded-xl bg-colorthree hover:brightness-75">
-                            <img
-                                src={urlForImage(featuredPost.Image)}
-                                alt="featured post"
-                                className="h-20 rounded-sm"
+                        <section className="flex gap-2">
+                            <Image
+                                src={urlForImage(featuredPost.Image) || `#`}
+                                alt={featuredPost.title}
+                                height={100}
+                                width={100}
+                                className="rounded-sm"
                             />
-                            <h3 className="px-2 py-1 font-montserrat text-sm font-bold text-white">
+                            <div>
+                            <h1 className="font-montserrat text-sm font-bold text-white">
                                 {featuredPost.title}
-                            </h3>
-                            <p className="text-md px-2 pb-4 font-inconsolata leading-relaxed text-colorone">
+                            </h1>
+                            <p className="font-inconsolata text-sm text-colorone">
                                 {featuredPost.summary}
                             </p>
-                        </div> */}
-                        <Card className='bg-colorthree hover:scale border-opacity-0'>
-                            <CardHeader>
-                            <CardTitle className='font-montserrat text-md tracking-wide font-bold text-white'>Featured Post:</CardTitle>
-                            <Image
-                                    src={urlForImage(featuredPost.Image)}
-                                    alt="featured post"
-                                    height={200}
-                                    width={200}
-                                    className='rounded-sm w-full'
-                                />
-                                <CardTitle className='font-montserrat text-md tracking-wide font-bold text-white'>{featuredPost.title}</CardTitle>
-                                <CardDescription className='font-inconsolata text-colorone leading-relaxed'>
-                                    {featuredPost.summary}
-                                </CardDescription>
-                            </CardHeader>
-                           
-                        </Card>
+                            </div>
+                        </section>
                     </Link>
-                </div>
-            </section>
-
-            {/* Projects */}
-            <section className="px-1">
-                <h2 className="mb-6 font-montserrat text-sm font-bold text-white">
-                    Projects :
-                </h2>
-                <div className="flex flex-col gap-6">
-                    {projects.map((project: any, index: number) => {
-                        return (
-                            <Link href={project.githubURL || '#'} key={index}>
-                                <Card className='bg-colorthree hover:scale border-opacity-0'>
-                                    <CardHeader>
-                                        <CardTitle className='font-montserrat text-md tracking-wide font-bold text-white'>{project.Title}</CardTitle>
-                                        <CardDescription className='font-inconsolata text-colorone leading-relaxed'>
-                                            {project.Details}
-                                        </CardDescription>
-                                    </CardHeader>
-                                </Card>
-                            </Link>
-                        )
-                    })}
                 </div>
             </section>
         </div>
