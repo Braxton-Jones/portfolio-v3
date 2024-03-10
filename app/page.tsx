@@ -33,7 +33,7 @@ export default async function Home() {
             {/* Header */}
             <div>
                 <h2 className="mb-2 font-montserrat text-sm font-bold text-white">
-                    About Me:
+                    {`About Me:`}
                 </h2>
                 <p className="font-inconsolata font-normal tracking-wide text-colorone">
                     {`
@@ -76,7 +76,7 @@ export default async function Home() {
             {/* Currently Working On */}
             <div className="px-1">
                 <h2 className="mb-2 font-montserrat text-sm font-bold text-white">
-                    What I'm Working On:
+                    {`What I'm Working On:`}
                 </h2>
 
                 <p className="mt-1 font-inconsolata font-normal tracking-wide text-colorone">
@@ -101,7 +101,7 @@ export default async function Home() {
                     className="italic underline hover:bg-colorone hover:opacity-20"
                 >
                     <p className="font-montserrat text-sm font-bold text-white border p-2 rounded-lg w-fit ">
-                    ✨ Play my word game, Matchanym
+                    {`✨ Play my word game, Matchanym`}
                     </p>
                 </Link>
             </div>
@@ -109,7 +109,7 @@ export default async function Home() {
             {/* Projects */}
             <section className="px-1">
                 <h2 className="font-montserrat text-lg font-black text-white">
-                    Projects :
+                    {`Projects :`}
                 </h2>
                 <Separator className="my-3" />
                 <div className="flex flex-col gap-2">
