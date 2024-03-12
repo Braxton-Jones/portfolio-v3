@@ -133,12 +133,24 @@ export default async function Home() {
                                 </div>) : null}
                             
                                 <div>
-                                    <h2 className="font-montserrat text-sm font-black tracking-wider text-white">
+                                    <h2 className="font-montserrat text-md font-black tracking-wider text-white">
                                         {project.Title}
                                     </h2>
                                     <p className="font-inconsolata text-sm text-colorone">
                                         {project.Details}
                                     </p>
+                                    <div className='flex gap-2 flex-wrap mt-1'>
+                                        {project.TechStack?.map((tech: any, index: number) => {
+                                            return (
+                                                <span
+                                                    key={index}
+                                                    className="font-inconsolata text-xs text-colorone bg-black px-3 py-1 rounded-xl w-fit"
+                                                >
+                                                    {tech}
+                                                </span>
+                                            )
+                                        })}
+                                    </div>
                                 </div>
                             </Link>
                         )
