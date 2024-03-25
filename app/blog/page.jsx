@@ -25,9 +25,9 @@ export default async function Blog() {
                         <Link href={`/blog/${post.slug.current}`} key={index}>
                             <div
                                 key={index}
-                                className="flex flex-col gap-2 rounded-md bg-colorthree p-3 hover:brightness-75 "
+                                className="flex flex-col gap-2 rounded-md border border-colorone p-4 cursor-pointer hover:bg-colorone hover:bg-opacity-10 transition-all duration-300 ease-in-out"
                             >
-                                <h2 className="text-md font-montserrat text-white">
+                                <h2 className="text-md font-montserrat text-white font-black">
                                     {post.title}
                                 </h2>
                                 <p className="font-inconsolata text-sm text-colorone">

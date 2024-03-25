@@ -52,6 +52,16 @@ const Project: Project = {
             name: 'githubURL',
             type: 'string',
         },
+        {
+            title: 'Tech Stack',
+            name: 'TechStack',
+            type: 'array',
+            of: [
+                {
+                    type: 'string',
+                },
+            ],
+        }
     ],
 }
 
